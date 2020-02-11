@@ -51,7 +51,7 @@ void elevator()
 
 int main()
 {
-    printf("Evening! I'm the lift attendant, and you'll find no one better at taking you where you want to go! ");
+    printf("Evening! I'm the lift attendant, and I'm here to take you where you want to go! ");
     elevator();
     return 0;
 }
