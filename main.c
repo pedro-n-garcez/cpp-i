@@ -14,7 +14,7 @@ void elevator()
     flag = false;
     printf("We're on floor %d, the top floor is 15. Where to? ",currentFloor);
     scanf("%d",&whereTo);
-   
+
     for (int i = 0; i < nofl; i++)
     {
         if(floors[i] == whereTo)
@@ -35,7 +35,7 @@ void elevator()
                 printf("%d\n",currentFloor);
                 currentFloor = currentFloor - 1;
             }
-            printf("You are on floor %d.\n",currentFloor);
+            printf("DING! You are on floor %d.\n",currentFloor);
             printf("Would you like to go to a new floor? y/n ");
             scanf("%s",&choice);
             if(choice == 'y' || choice == 'Y')
