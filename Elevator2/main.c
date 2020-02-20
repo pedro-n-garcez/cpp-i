@@ -5,11 +5,9 @@
 int floors[16] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
 int chosenAmount = 0;
 int currentFloor = 0;
-int howMany = 0;
 size_t nofl = sizeof(floors)/sizeof(floors[0]);
 char choice;
 bool flag = false;
-int current = 0;
 int temp = 0;
 bool swap = true;
 
@@ -40,7 +38,7 @@ void elevator()
     }
    
     flag = true;
-    for (int k = 0; k < chosenAmount; k++)
+    for (int k = 0; k < wtsz; k++)
     {
         if(inarray(whereTo[k], floors, nofl) == 0)
         {
