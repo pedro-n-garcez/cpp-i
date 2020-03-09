@@ -121,7 +121,7 @@ void elevator()
             }
         }
         
-        printf("Mind the gate...");
+        printf("Mind the gate...\n");
 		node_t* last = get_node(currentFloor);
 		for (int i = 0; i < wt_len; i++)
 		{
@@ -145,7 +145,6 @@ void elevator()
 		    		currentFloor--;
 	    		} printf("DING! You're on floor %d.\n",currentFloor);
 			}
-			printf("WHERETO: %d | CURFLOOR: %d\n",whereTo[i],currentFloor); 
 			histAppend(currentFloor);
 		}
 		printf("Want to go to another floor? y/n ");
