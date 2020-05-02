@@ -25,7 +25,7 @@ Game::~Game()
 {
 }
 
-void Game::Hand() 
+void Game::Hand()
 {
 	while (p.hitme == true)
 	{
@@ -45,114 +45,114 @@ void Game::Hand()
 			p.hitme = false;
 		}
 	}
-	while (d.hitme == true) 
+	while (d.hitme == true)
 	{
 		if (p.sum(p.yourCards) > 21 || d.sum(d.yourCards) > 21) { break; }
-		DealerPlay();
+		if (d.sum(d.yourCards) < 18)
+		{
+			d.hitme = true;
+			std::cout << "\nDealer gets a new card.\n" << std::endl;
+			GetCard(d);
+		}
+		else if (d.sum(d.yourCards) >= 18)
+		{
+			d.hitme = false;
+			std::cout << "\nDealer stays.\n" << std::endl;
+		}
 	}
 	std::cout << "Player sum: " << p.sum(p.yourCards) << "\n";
 	std::cout << "Dealer sum: " << d.sum(d.yourCards) << "\n";
 	if (p.sum(p.yourCards) > 21)
 	{
-		std::cout << "Burst! YOU LOSE! And the dealer wins." << std::endl;
+		std::cout << "YOU LOST. It's a burst!" << std::endl;
 	}
 	else if (d.sum(d.yourCards) > 21)
 	{
-		std::cout << "Burst! YOU WIN! And the dealer loses!" << std::endl;
+		std::cout << "YOU WIN! The dealer bursts!" << std::endl;
 	}
 	else if (p.sum(p.yourCards) > d.sum(d.yourCards))
 	{
-		std::cout << "YOU WIN! And the dealer loses!" << std::endl;
+		std::cout << "YOU WIN! The dealer loses." << std::endl;
 	}
 	else if (p.sum(p.yourCards) < d.sum(d.yourCards))
 	{
-		std::cout << "YOU LOSE! And the dealer wins." << std::endl;
+		std::cout << "YOU LOSE! The dealer wins." << std::endl;
 	}
 	else if (p.sum(p.yourCards) == d.sum(d.yourCards))
 	{
 		std::cout << "IT'S A DRAW!" << std::endl;
-	} 
-}
-void Game::DealerPlay()
-{
-	if (d.sum(d.yourCards) < 18)
-	{
-		d.hitme = true;
-		std::cout << "\nDealer gets a new card.\n\n";
-		GetCard(d);
-	}
-	else if (d.sum(d.yourCards) >= 18)
-	{
-		d.hitme = false;
-		std::cout << "\nDealer stays.\n\n";
 	}
 }
+
 void Game::GetCard(Person& p)
 {
-	//std::cout << "DEBUG GETCARD\n";
-	//std::cout << counter << " CARD: " << c1.deck[counter] << " IN YOUR DECK: " << p.newCard << "\n";
-	p.newCard = c1.deck[counter];
-	//std::cout << "NOW IN YOUR DECK: " << p.newCard << std::endl;
-	switch (p.newCard)
+	if (counter < c1.deck.size())
 	{
-	case '2':
-		p.yourCards.push_back(2);
-		counter++;
-		break;
-	case '3':
-		p.yourCards.push_back(3);
-		counter++;
-		break;
-	case '4':
-		p.yourCards.push_back(4);
-		counter++;
-		break;
-	case '5':
-		p.yourCards.push_back(5);
-		counter++;
-		break;
-	case '6':
-		p.yourCards.push_back(6);
-		counter++;
-		break;
-	case '7':
-		p.yourCards.push_back(7);
-		counter++;
-		break;
-	case '8':
-		p.yourCards.push_back(8);
-		counter++;
-		break;
-	case '9':
-		p.yourCards.push_back(9);
-		counter++;
-		break;
-	case 'T':
-		p.yourCards.push_back(10);
-		counter++;
-		break;
-	case 'J':
-		p.yourCards.push_back(10);
-		counter++;
-		break;
-	case 'Q':
-		p.yourCards.push_back(10);
-		counter++;
-		break;
-	case 'K':
-		p.yourCards.push_back(10);
-		counter++;
-		break;
-	case 'A':
-		if (p.sum(p.yourCards) >= 10)
+		p.newCard = c1.deck[counter];
+		switch (p.newCard)
 		{
-			p.yourCards.push_back(1);
+		case '2':
+			p.yourCards.push_back(2);
+			counter++;
+			break;
+		case '3':
+			p.yourCards.push_back(3);
+			counter++;
+			break;
+		case '4':
+			p.yourCards.push_back(4);
+			counter++;
+			break;
+		case '5':
+			p.yourCards.push_back(5);
+			counter++;
+			break;
+		case '6':
+			p.yourCards.push_back(6);
+			counter++;
+			break;
+		case '7':
+			p.yourCards.push_back(7);
+			counter++;
+			break;
+		case '8':
+			p.yourCards.push_back(8);
+			counter++;
+			break;
+		case '9':
+			p.yourCards.push_back(9);
+			counter++;
+			break;
+		case 'T':
+			p.yourCards.push_back(10);
+			counter++;
+			break;
+		case 'J':
+			p.yourCards.push_back(10);
+			counter++;
+			break;
+		case 'Q':
+			p.yourCards.push_back(10);
+			counter++;
+			break;
+		case 'K':
+			p.yourCards.push_back(10);
+			counter++;
+			break;
+		case 'A':
+			if (p.sum(p.yourCards) >= 10)
+			{
+				p.yourCards.push_back(1);
+			}
+			else if (p.sum(p.yourCards) < 10)
+			{
+				p.yourCards.push_back(11);
+			}
+			counter++;
+			break;
 		}
-		else if (p.sum(p.yourCards) < 10)
-		{
-			p.yourCards.push_back(11);
-		}
-		counter++;
-		break;
+	}
+	else {
+		std::cout << "There are no more cards in the deck." << std::endl;
 	}
 }

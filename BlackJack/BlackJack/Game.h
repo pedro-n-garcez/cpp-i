@@ -7,15 +7,15 @@
 
 class Game
 {
-public:
+private:
 	int counter;
+public:
 	Player p;
 	Dealer d;
 	Cards c1;
 	Game();
 	~Game();
 	void Hand();
-	void DealerPlay();
 	void GetCard(Person& p);
 };
 

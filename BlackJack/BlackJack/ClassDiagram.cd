@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cards">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAIAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cards.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dealer">
+    <Position X="1" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dealer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Game">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAQAiAAAMEAEBAAAAAAAA=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Person">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAABAAAAAAAAAAAAIAAAAAAAAAAAAAgIAAIAAAAAAA=</HashCode>
+      <FileName>Person.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAABA=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

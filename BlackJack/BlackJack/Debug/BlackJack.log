@@ -1,3 +1,4 @@
 ﻿  Game.cpp
+c:\stuff\col\6s2020\c++\blackjack\blackjack\game.cpp(89): warning C4018: '<': signed/unsigned mismatch
   BlackJack.vcxproj -> C:\Stuff\col\6S2020\C++\BlackJack\Debug\BlackJack.exe
   BlackJack.vcxproj -> C:\Stuff\col\6S2020\C++\BlackJack\Debug\BlackJack.pdb (Full PDB)
