@@ -8,15 +8,14 @@
 class Game
 {
 private:
-	int counter;
-public:
 	Player p;
 	Dealer d;
 	Cards c1;
-	Game();
-	~Game();
 	void Hand();
 	void GetCard(Person& p);
+public:
+	Game();
+	~Game();
 };
 
 #endif

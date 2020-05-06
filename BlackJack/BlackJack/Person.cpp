@@ -13,7 +13,6 @@ int Person::sum(std::vector<int> v)
 
 Person::Person()
 {
-	hitme = true;
 }
 
 

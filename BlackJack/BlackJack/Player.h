@@ -3,6 +3,8 @@
 #define PLAYER_H
 #include "Person.h"
 #include <string>
+
+//Child class
 class Player :
 	public Person
 {

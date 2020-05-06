@@ -4,11 +4,12 @@
 #include <string>
 #include <vector>
 
+//base class
 class Person
 {
 public:
 	char newCard;
-	bool hitme;
+	bool hitme; //whether person still wants to hit
 	std::vector<int> yourCards;
 	int sum(std::vector<int> v);
 

@@ -1,8 +1,6 @@
 #pragma once
 #ifndef CARDS_H
 #define CARDS_H
-#include <cstdlib>
-#include <ctime>
 #include <vector>
 
 class Cards

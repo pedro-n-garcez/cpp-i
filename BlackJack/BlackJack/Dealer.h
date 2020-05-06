@@ -3,6 +3,8 @@
 #define DEALER_H
 
 #include "Person.h"
+
+//child class
 class Dealer :
 	public Person
 {

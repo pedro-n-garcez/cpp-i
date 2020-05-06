@@ -4,6 +4,7 @@
 
 Dealer::Dealer()
 {
+	this->hitme = true;
 }
 
 

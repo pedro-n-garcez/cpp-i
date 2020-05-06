@@ -3,14 +3,16 @@
 #include <string>
 #include <algorithm>
 #include <cstdlib>
-#include <ctime>
+#include <chrono>
 #include <vector>
+#include <random>
 
 
 Cards::Cards()
 {
-	std::srand(time(0));
-	std::random_shuffle(deck.begin(), deck.end());
+	//shuffle deck
+	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+	std::shuffle(deck.begin(), deck.end(), std::default_random_engine(seed));
 }
 
 

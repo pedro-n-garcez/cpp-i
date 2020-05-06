@@ -4,6 +4,7 @@
 
 Player::Player()
 {
+	this->hitme = true;
 }
 
 
