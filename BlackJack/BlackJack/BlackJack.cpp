@@ -9,7 +9,6 @@
 int main()
 {
 	Game g;
-	system("pause");
     return 0;
 }
 
